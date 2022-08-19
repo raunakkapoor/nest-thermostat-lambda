@@ -69,7 +69,7 @@ def lambda_handler(event, context):
             "nest_project_id",
             "nest-refresh-token",
             "nest-ff-device-id",
-            "nest-sf-device-id"
+            "nest-sf-device-id",
             "nest-heat-celsius",
             "nest-cold-celsius",
         ],
