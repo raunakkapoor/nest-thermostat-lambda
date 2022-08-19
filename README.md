@@ -23,4 +23,4 @@ Turning ON event from Eventbridge:
 ```
 
 * Deployment
-  * Lambda code is getting deployed through AWS Code Pipeline and AWS Code Deploy.
+  * Lambda code is getting deployed through AWS Code build.

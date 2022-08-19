@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.8
+    commands:
+      - echo "Building the zip and updating lambda code"
+  build:
+    commands:
+      - echo "Zipping deployment package..."
+      - zip -r9 ../lambda_code.zip my-nest-thermostat-lambda.py
+  post_build:
+    commands:
+      - echo "Updating lambda Function..."
+      - aws lambda update-function-code --function-name my-nest-thermostat-lambda --zip-file fileb://lambda_code.zip
+      - echo "DONE!!"
