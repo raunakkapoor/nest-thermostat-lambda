@@ -24,4 +24,3 @@ Turning ON event from Eventbridge:
 
 * Deployment
   * Lambda code is getting deployed through AWS Code build.
-
