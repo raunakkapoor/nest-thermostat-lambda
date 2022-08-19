@@ -7,10 +7,10 @@ phases:
       - echo "Building the zip and updating lambda code"
   build:
     commands:
-      - echo "Zipping deployment package..."
-      - zip -r9 ../lambda_code.zip my-nest-thermostat-lambda.py
+      - echo "Zipping deployment package"
+      - zip -r9 lambda_code.zip my-nest-thermostat-lambda.py
   post_build:
     commands:
-      - echo "Updating lambda Function..."
+      - echo "Updating lambda Function"
       - aws lambda update-function-code --function-name my-nest-thermostat-lambda --zip-file fileb://lambda_code.zip
       - echo "DONE!!"
