@@ -13,5 +13,4 @@ phases:
     commands:
       - echo "Updating lambda Function"
       - aws lambda update-function-code --function-name my-nest-thermostat-lambda --zip-file fileb://lambda_code.zip
-      - aws lambda update-function-configuration --function-name my-nest-thermostat-lambda --handler "my-nest-thermostat-lambda.lambda_handler"
       - echo "DONE!!"
